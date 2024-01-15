@@ -41,7 +41,9 @@ const Post = () => {
 
   return (
     <div className="post">
-      <Image src="/post1.png" alt="post 1" />
+      <div className="tw-h-[300px] tw-relative">
+        <Image src="/post1.png" alt="post 1" fill />
+      </div>
 
       <Tabs value={activeTab} onChange={handleTabChange}>
         <Tab label="Google" {...a11yProps(0)} />

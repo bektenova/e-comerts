@@ -1,9 +1,12 @@
 import { Avatar } from "@mui/material";
 import axios from "axios";
+import { notFound } from "next/navigation";
+
 const TeamPage = async () => {
   const response = await axios.get("https://dummyjson.com/users");
-  const { users } = response.data;
-  console.log("users: ", users);
+  const users = response.data.users;
+
+  if (!response || !users) return notFound();
 
   return (
     <div
@@ -19,7 +22,6 @@ const TeamPage = async () => {
           of Classical physics: Newtonian mechanics.
         </p>
       </div>
-      {/*TEXT*/}
       <div className="tw-flex tw-flex-col tw-gap-y-12 md:tw-flex-row md:tw-flex-wrap m md:tw-justify-between md:tw-gap-y-10 ">
         {users.map((item) => (
           <div key={item.id} className="tw-flex tw-flex-row md:tw-basis-1/3">

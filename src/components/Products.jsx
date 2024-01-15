@@ -7,6 +7,7 @@ import foto5 from "@/assets/foto5.png";
 import foto6 from "@/assets/foto6.png";
 import foto7 from "@/assets/foto7.png";
 import foto8 from "@/assets/foto8.png";
+import { notFound } from "next/navigation";
 
 const products = [
   {
@@ -80,7 +81,9 @@ const products = [
   },
 ];
 
-const Products = () => {
+const Products = async () => {
+  if (!products) return notFound();
+
   return (
     <section className="tw-px-9  md:tw-px-36 tw-flex tw-flex-col md:tw-gap-y-8 md:tw-pt-[100px]">
       <div className="tw-text-center ">
