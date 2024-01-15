@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button, Tab, Tabs, Box } from "@mui/material";
 import { AlarmClockCheck, AreaChart, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import Post1 from "@/assets/post1.png";
+import Post1 from "../assets/post1.png";
 // import Post2 from "@/assets/tabs2.png";
 
 // import Post3 from "@/assets/tabs3.png";
