@@ -2,7 +2,7 @@ import MainOne from "@/components/MainOne";
 import MainOneMobile from "@/components/MainOneMobile";
 import Part from "@/components/Part/Part";
 import Posts from "../components/Posts";
-// import Products from "../components/Products";
+import Products from "../components/Products";
 import EditorsPick from "@/components/EditorsPick/EditorsPick";
 import GreenClassic from "@/components/GreenClassic/GreenClassic";
 // import Footer from "@/components/Footer/Footer";
@@ -14,7 +14,7 @@ export default function Home() {
       <MainOne />
       <MainOneMobile />
       <EditorsPick />
-      {/* <Products /> */}
+      <Products />
       <GreenClassic />
       <Part />
 
